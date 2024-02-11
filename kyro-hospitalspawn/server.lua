@@ -40,16 +40,6 @@ RegisterServerEvent('kyro-hospitalspawn:charge', function()
     local cost = Config.Cost
 
     Player.Functions.RemoveMoney('bank', cost, 'Hospital-Transport')
-    local role = "1192795546075795456"
-    exports["kyro-resources"]:checkifrole(src, role, function(hasRole)
-        if hasRole then
-            local refund = math.floor(cost / 2)
-            Player.Functions.AddMoney('bank', refund, 'Hospital-Transport WHITELIST REFUND')
-            TriggerClientEvent('QBCore:Notify', src, "Whitelist health insurance $" .. refund .. ' REFUNDED', 'success', 10000)
-
-        else
-
-        end
     end)
 end)
 
