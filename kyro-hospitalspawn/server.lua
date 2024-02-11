@@ -40,7 +40,6 @@ RegisterServerEvent('kyro-hospitalspawn:charge', function()
     local cost = Config.Cost
 
     Player.Functions.RemoveMoney('bank', cost, 'Hospital-Transport')
-    end)
 end)
 
 
